@@ -12,6 +12,93 @@ Changelog entries are classified using the following labels:
 - `Fixed`: for any bug fixes
 - `Removed`: for deprecated features removed in this release
 
+## [1.0.0-rc.30]
+
+### Fixed
+
+- Ensure `@src` attributes on img tags always use URL path separators - DEV-20272
+- Ensure paths in epub transform are correctly normalized to the platform - DEV-20270 / DEV-20269
+- Update signature of `assetFileNames` in `vite` config to handle input paths - DEV-20316
+
+## [1.0.0-rc.29]
+
+### Fixed
+
+- Fixes an issue where externally-hosted IIIF images did not appear in object grids - DEV-19295
+- Filepaths + renderOutputs - DEV-20261
+- Preprocessor check / HTML page - DEV-19983
+- IIIF assets were not generating - DEV-20272
+- Fixes pathing for epub cover - DEV-20269
+
+## [1.0.0-rc.28]
+
+### Bumped
+
+- `@11ty/eleventy-img` to v6.0.1
+- `@11ty/eleventy-navigation` to v1.0.1
+- `@11ty/eleventy-plugin-vite` to v6.0.0
+
+### Fixed
+
+- `DEV-19999`: import.meta.dirname in table of contents component breaks builds on Windows 
+- `DEV-20261`: Figure components not rendering in HTML representations
+
+## [1.0.0-rc.27]
+
+### Added
+
+- Sitemap plugin for quire publications
+
+### Changed
+
+- Allow TOC images to be externally hosted
+
+### Fixed
+
+- Handling of table figures so they are not added to 11ty templates
+- Corrected search JSON output path when using a directory other than `_site`
+- Escaped HTML entities in OpenGraph page `<meta>` tags
+- MLA citations in menu
+- Windows URI/URL issues with file imports [DEV-19999]
+
+## [1.0.0-rc.26]
+
+### Removed
+
+- `patch-package` dependency
+
+## [1.0.0-rc.25]
+
+### Changed
+
+- Make `patch-package` a core dependency
+
+## [1.0.0-rc.24]
+
+### Changed
+
+- Replaced in-text placeholder for IIIF choice figures with user-controlled choices + UI
+
+## [1.0.0-rc.23]
+
+### Bumped
+
+- Update `@11ty/eleventy` and `@11ty/eleventy-plugin-vite` to Eleventy v3
+
+### Breaking
+
+This release is updates the *major* version of `eleventy`, which requires using ECMAScript module (ESM) syntax for JavaScript code. Specifically, ESM `import` statements to use other modules and the `import.meta.url` property for a module's file path from within that module. For most Quire users this update should be transparent. For publications that have customized the quire code or import packages that are not already in the publication's package dependency tree changes may be needed to address ESM conformance to the custom modules.
+
+## [1.0.0-rc.22]
+
+### Changed
+
+- Patch `@11ty/eleventy-plugin-vite` 11ty/eleventy-plugin-vite/issues/22
+
+### Fixed
+
+- Windows EPERM error when running `quire build`, DEV-13837
+
 ## [1.0.0-rc.21]
 
 ### Fixed

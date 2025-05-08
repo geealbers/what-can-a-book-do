@@ -1,21 +1,17 @@
-const filterOutputs = require('../filter.js')
-const jsdom = require('jsdom')
-const layout = require('./layout')
-const path = require('path')
-const writer = require('./writer')
-
-const { JSDOM } = jsdom
+import { JSDOM } from 'jsdom'
+import filterOutputs from '../filter.js'
+import layout from './layout.js'
+import path from 'node:path'
+import writer from './writer.js'
 
 /**
  * Content transforms for EPUB output
  */
-module.exports = function(eleventyConfig, collections, content) {
+export default function (eleventyConfig, collections, content) {
   const pageTitle = eleventyConfig.getFilter('pageTitle')
   const removeHTML = eleventyConfig.getFilter('removeHTML')
   const slugify = eleventyConfig.getFilter('slugify')
   const slugifyIds = eleventyConfig.getFilter('slugifyIds')
-  const { imageDir } = eleventyConfig.globalData.config.figures
-  const { outputPath: iiifOutputDir } = eleventyConfig.globalData.iiifConfig.dirs
   const { language } = eleventyConfig.globalData.publication
   const { assets, readingOrder } = eleventyConfig.globalData.epub
   const { outputDir } = eleventyConfig.globalData.config.epub
@@ -23,7 +19,7 @@ module.exports = function(eleventyConfig, collections, content) {
   const write = writer(outputDir)
 
   /**
-   * Gather asset filepaths
+   * Gather asset filepaths, normalizing to platform paths for consumers
    *
    * @param      {HTMLElement}  element
    */
@@ -32,18 +28,17 @@ module.exports = function(eleventyConfig, collections, content) {
     images.forEach((img) => {
       const src = img.getAttribute('src')
       if (!src) return
-      const pattern = `^(${imageDir}|/${iiifOutputDir})`
-      const regex = new RegExp(pattern, 'g')
-      if (src.match(regex)) {
-        const relativePath = src.replace(/^\//, '')
-        assets.push(relativePath)
-      }
+
+      const normalizedPath = path.normalize(src)
+      const relativePath = normalizedPath.startsWith(path.sep) ? normalizedPath.slice(path.sep.length) : src
+
+      assets.push(relativePath)
     })
   }
 
   /**
    * Removes preceding slashes from asset paths
-   * @param {HTMLElement} element 
+   * @param {HTMLElement} element
    */
   const transformPaths = (element) => {
     const images = element.querySelectorAll('img')
@@ -69,8 +64,8 @@ module.exports = function(eleventyConfig, collections, content) {
    */
   const epubPages = collections.epub.map(({ outputPath }) => outputPath)
   const { ext } = path.parse(this.outputPath)
-  const index = epubPages.findIndex((path) => path == this.outputPath)
-  let epubContent =  index !== -1 ? content : undefined
+  const index = epubPages.findIndex((path) => path === this.outputPath)
+  let epubContent = index !== -1 ? content : undefined
 
   // Returning content allows subsequent transforms to process it unmodified
   if (!epubContent || ext !== '.html') return content
@@ -145,14 +140,13 @@ module.exports = function(eleventyConfig, collections, content) {
 
     function relativeUrl (path) {
       const base = eleventyConfig.baseURL || 'http://localhost'
-      let url;
+      let url
       try {
         url = new URL(path)
       } catch (TypeError) {
         url = new URL(path, base)
-      } finally {
-        return url
       }
+      return url
     }
     const { hash, pathname } = relativeUrl(href)
 
