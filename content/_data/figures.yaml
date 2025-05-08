@@ -61,14 +61,14 @@ figure_list:
         viewing_direction: "right-to-left"
 
   - id: "stereoscope-static"
-    src: figures/stereoscope-static.jpg
+    src: figures/stereoscope-static-too.jpg
     label: "17.7 x 8.8 cm (7 × 3 1/2 in.)"
     caption: ""
     alt: ""
 
   - id: "walking-tour"
     zoom: true
-    caption: "A walk through the garden."
+    caption: ""
     sequences:
       - id: figures/walking-tour/
         start: 292.jpg
@@ -78,7 +78,7 @@ figure_list:
   
   - id: "timelapse"
     zoom: true
-    caption: "Timelapse"
+    caption: ""
     sequences:
       - id: figures/timelapse/
         behavior:
@@ -87,20 +87,23 @@ figure_list:
 
   - id: "rotating-sandwich"
     zoom: true
-    caption: "Sandwich"
+    caption: ""
     sequences:
       - id: figures/rotating-sandwich/
+        start: 3011.jpg
         behavior:
           - continuous
           - sequence
         regex: /\d{4}\.jpg/
+        viewing_direction: "right-to-left"
   
   - id: "tomography-sandwich"
     zoom: true
-    caption: "Sandwich"
+    caption: ""
     sequences:
       - id: figures/tomography-sandwich/
         behavior:
           - continuous
           - sequence
         regex: /\d{4}\.jpg/
+        viewing_direction: "right-to-left"

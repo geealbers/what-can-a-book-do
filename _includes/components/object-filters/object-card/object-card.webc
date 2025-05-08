@@ -66,11 +66,11 @@ const getAttributes = ({ data }, { object_card, objects }) => {
   border-radius: 2px;
   box-shadow: none;
   background-color: #ffffff;
-  color: #CF4747;
+  color: #008568;
 }
 
 .object-card:hover {
-  color: #a02a2a;
+  color: #004c3b;
 }
 
 .object-card__image img {
@@ -110,14 +110,14 @@ const getAttributes = ({ data }, { object_card, objects }) => {
 .object-card .arrow {
   margin-left: 4px;
   position: absolute;
-  fill: #CF4747;
+  fill: #008568;
   transition: all .25s ease;
 }
 
 .object-card:hover .arrow {
   transform: translate(0.75em);
   -webkit-transition: all .25s ease;
-  fill: #a02a2a;
+  fill: #004c3b;
 }
 
 .object-card .arrow svg {
