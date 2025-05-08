@@ -1,116 +1,106 @@
 figure_list:
 
-  - id: "lange"
-    src: figures/lange.jpg
-    caption: "*Dorothea Lange, Resettlement Administration photographer, in California*, 1936."
-    credit: "Library of Congress Prints and Photographs Division"
+  - id: "interface"
+    src: figures/interface.jpg
+    caption: ""
+    credit: "Working on a Quire project means working in a text editor like those commonly used for coding. Content for Quire projects is formatted as [Markdown](https://en.wikipedia.org/wiki/Markdown), and augmented with shortcodes for more complex features."
+    alt: "A code text editor with a sidebar to the left listing many different files. The main panel shows plain text content with some varied character markings. Some visible text and features look to be those from the previous page of this website."
 
-  - id: "evans"
-    src: figures/evans.jpg
-    caption: "*Walker Evans, profile, hand up to face*, 1937."
-    credit: "Library of Congress Prints and Photographs Division"
+  - id: "ukeleles"
+    src: figures/ukeleles.jpg
+    caption: "There are different ways of getting a ukelele. You can buy one from a store like the one on the left from [Guitar Center](https://www.guitarcenter.com/Kala/Satin-Mahogany-Soprano-Ukulele-1394721681095.gc). Or, you can make one yourself, like the one on the right from [KiwiCo](https://www.kiwico.com/us/store/dp/wooden-ukulele/6553). The KiwiCo version is more work, but it also gives more opportunity for customization, and a better understanding of what a ukelele is and how it works."
+    alt: "Two ukeleles on a plain orange background, but the one on the right is made from a kit, and the pieces from the kit are spread out individually below and in front of the finished model."
 
-  - id: "fig-1"
-    label: "Figure 1"
-    src: figures/evans-legionnaire.jpg
-    caption: "Walker Evans. *[American Legionnaire]*, 1935."
-    credit: "The J. Paul Getty Museum, Los Angeles"
+  - id: "community-showcase"
+    src: figures/community-showcase.jpg
+    caption: ""
+    credit: "Some of the projects featured in Quire’s [Community Showcase](https://quire.getty.edu/community/community-showcase/)."
+    alt: "A grid of twenty-five images of website home pages with small text labels below each. The images at the bottom are cut off, indicating more would continue below"
 
-  - id: "fig-2"
-    label: "Figure 2"
-    src: figures/evans-sons.jpg
-    caption: "Walker Evans. *Sons of the American Legion, Bethlehem, Pennsylvania*, 1935."
-    credit: "The J. Paul Getty Museum, Los Angeles"
-
-  - id: "fig-3"
-    label: "Figure 3"
-    src: figures/evans-graveyard.jpg
-    caption: "Walker Evans. *Graveyard, Houses and Steel Mill, Bethlehem, Pennsylvania*, 1935; printed later."
-    credit: "The J. Paul Getty Museum, Los Angeles"
-
-  - id: "fig-4"
-    label: "Figure 4"
-    src: figures/evans-hymns.jpg
-    caption: "Walker Evans. *Alabama Tenant Farmer Family Singing Hymns / The Tengle Family, Hale County, Alabama*, 1936."
-    credit: "The J. Paul Getty Museum, Los Angeles"
-
-  - id: "fig-5"
-    label: "Figure 5"
-    src: figures/evans-burroughs.jpg
-    caption: "Walker Evans. *Floyd and Lucille Burroughs, Hale County, Alabama*, 1936."
-    credit: "The J. Paul Getty Museum, Los Angeles"
-
-  - id: "lange-house"
-    src: figures/lange-house.jpg
-    caption: "Dorothea Lange. *Abandoned Dust Bowl Home*, about 1935–1940."
-    credit: The J. Paul Getty Museum, Los Angeles
-
-  - id: "vid-1"
-    poster: figures/evans-video-still.jpg
-    media_id: BpGN0UUtqqU
-    media_type: youtube
-    label: "Video 1"
-    caption: "A selection of Walker Evans photos from the across the United States of America, 1930s."
-    credit: The J. Paul Getty Museum, Los Angeles
-
-  - id: "table-1"
-    src: "tables/evans-works.html"
-    media_type: table
-
-  - id: "audio-1"
-    media_id: 336879231
-    media_type: soundcloud
-    label: "Audio 1"
-    caption: "Echoing the work of Lange and Evans, contemporary photographer Chris Killip documents social landscapes and is known for a series of powerful images of struggling industrial communities in North East England."
-    credit: "© J. Paul Getty Trust"
-
-  - id: "cat-1"
-    src: figures/lange-mother-a.jpg
-    caption: "Dorothea Lange, *Human Erosion in California / Migrant Mother*, 1936."
-    credit: The J. Paul Getty Museum, Los Angeles
-    download: true
+  - id: "glass-flask"
     zoom: true
+    label: "Click to rotate"
+    caption: "Example of a rotating object from one of our online collection catalogues, [*Ancient Glass in the J. Paul Getty Museum*](https://www.getty.edu/publications/ancient-glass/). Flask, unknown artist/maker, 1st century A.D. Glass. 7.5 × 4.1 cm (2 15/16 × 1 5/8 in.). The J. Paul Getty Museum, Villa Collection, Malibu, California, 2003.278."
+    alt: "A vase on a plain, gray background. The vase is made of swirls of opaque glass in shades ranging from dark purple or black to lighter purple and white."
+    sequences:
+      - id: figures/glass-flask/
+        behavior:
+          - continuous
+          - sequence
+        viewing_direction: "right-to-left"
 
-  - id: "mother-variants"
-    label: "Figure 1.1"
-    caption: "Alternate versions of Dorothea Lange’s *Migrant Mother*, 1936."
-    credit: "Library of Congress Prints and Photographs Division"
-    annotations:
-      - input: radio
-        items:
-        - src: figures/lange-mother-b.jpg
-          label: "Variant #1"
-        - src: figures/lange-mother-c.jpg
-          label: "Variant #2"
-
-  - id: "mother-annotations"
-    src: "figures/lange-layers/base.jpg"
+  - id: "sequence-images"
+    src: figures/sequence-images.jpg
+    caption: "Quire’s rotating images are made up of sequences of static JPG images. In this case, one image for every five degrees of rotation."
+    alt: "A grid of 25 images of a glass vase, each one is labeled with a number that increases by 5 each time, and shows the vase sequentially from slightly different angles. The bottom row is cut off implying a continuation of the sequence."
+  
+  - id: "muybridge"
     zoom: true
-    label: "Figure 1.2"
-    caption: "This version of the print from the Library of Congress Prints and Photographs Division is mounted on paper board and includes an original FSA label. Note too the thumb seen in the lower right corner. It is also visible in the Getty‘s print, but Lange’s negative was later retouched to remove the thumb and in later prints, it is only a ghostly shadow."
-    annotations:
-      - input: checkbox
-        items:
-          - src: "figures/lange-layers/original-label.png"
-            selected: true
-          - src: "figures/lange-layers/additional-label.png"
-          - src: "figures/lange-layers/scratches.png"
-          - src: "figures/lange-layers/thumb.png"
-            selected: true
+    caption: ""
+    sequences:
+      - id: figures/muybridge/
+        behavior:
+          - continuous
+          - sequence
+        viewing_direction: "right-to-left"
 
-  - id: "cat-2"
-    src: figures/evans-fields-family-a.jpg
-    caption: "Walker Evans, *Bud Fields with His Wife Ivy, and His Daughter Ellen, Hale County, Alabama*, 1936."
-    credit: The J. Paul Getty Museum, Los Angeles
-    download: true
+  - id: "muybridge-static"
+    src: figures/muybridge-static.jpg
+    caption: ""
+    alt: ""
+
+  - id: "stereoscope"
     zoom: true
+    caption: ""
+    alt: ""
+    sequences:
+      - id: figures/stereoscope/
+        behavior:
+          - continuous
+          - sequence
+        viewing_direction: "right-to-left"
 
-  - id: "cat-2-b"
-    src: figures/evans-fields-family-b.jpg
-    caption: "Walker Evans, *Sharecropper's Family, Hale County, Alabama / Bud Fields and His Family, Hale County, Alabama / Bud Woods and His Family*, 1936."
-    credit: The J. Paul Getty Museum, Los Angeles
+  - id: "stereoscope-static"
+    src: figures/stereoscope-static.jpg
+    label: "17.7 x 8.8 cm (7 × 3 1/2 in.)"
+    caption: ""
+    alt: ""
 
-  - id: "cat-2-c"
-    src: figures/evans-bud-fields.jpg
-    caption: "Walker Evans, * [William Edward (Bud) Fields, A Cotton Sharecropper, Hale County, Alabama]/[Bud Woods, Tenant Farmer]*, 1936."
-    credit: The J. Paul Getty Museum, Los Angeles
+  - id: "walking-tour"
+    zoom: true
+    caption: "A walk through the garden."
+    sequences:
+      - id: figures/walking-tour/
+        start: 292.jpg
+        behavior:
+          - continuous
+          - sequence
+  
+  - id: "timelapse"
+    zoom: true
+    caption: "Timelapse"
+    sequences:
+      - id: figures/timelapse/
+        behavior:
+          - continuous
+          - sequence
+
+  - id: "rotating-sandwich"
+    zoom: true
+    caption: "Sandwich"
+    sequences:
+      - id: figures/rotating-sandwich/
+        behavior:
+          - continuous
+          - sequence
+        regex: /\d{4}\.jpg/
+  
+  - id: "tomography-sandwich"
+    zoom: true
+    caption: "Sandwich"
+    sequences:
+      - id: figures/tomography-sandwich/
+        behavior:
+          - continuous
+          - sequence
+        regex: /\d{4}\.jpg/
